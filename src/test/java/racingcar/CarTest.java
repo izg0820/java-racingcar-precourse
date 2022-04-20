@@ -7,7 +7,7 @@ public class CarTest {
 
     @Test
     void 자동차이름_검증() {
-        Car car = new Car("abcde");
+        Car car = new Car("abcde", 0);
         assertThat(car.isValidate()).isTrue();
     }
 
