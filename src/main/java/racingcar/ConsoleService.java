@@ -5,6 +5,6 @@ import camp.nextstep.edu.missionutils.Console;
 public class ConsoleService {
 
     public static Repeat read() {
-        return new Repeat(Console.readLine());
+        return new Repeat(Integer.parseInt(Console.readLine()));
     }
 }

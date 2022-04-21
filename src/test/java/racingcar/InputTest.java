@@ -12,7 +12,7 @@ public class InputTest {
     @ParameterizedTest
     @CsvSource(value = {"123:true", "12E:false"}, delimiter = ':')
     void 입력값테스트(String input, String expected) {
-        Repeat repeat = new Repeat(input);
+        Repeat repeat = new Repeat(Integer.parseInt(input));
         assertThat(repeat.isValidate()).isEqualTo(Boolean.parseBoolean(expected));
     }
 

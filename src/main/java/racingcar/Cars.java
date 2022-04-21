@@ -23,9 +23,9 @@ public class Cars {
         return cars;
     }
 
-    public void move() {
+    public void move(RandomNumber randomNumber) {
         for (Car car : cars) {
-            car.setPosition(new RandomNumber());
+            car.setPosition(randomNumber);
         }
     }
 
