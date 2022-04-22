@@ -15,4 +15,8 @@ public class Repeat {
     public boolean isEnd() {
         return repeatNumber == 0;
     }
+
+    public void reduce() {
+        this.repeatNumber--;
+    }
 }

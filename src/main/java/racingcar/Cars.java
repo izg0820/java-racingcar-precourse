@@ -14,7 +14,7 @@ public class Cars {
     }
 
     private List<Car> splitCarsName(String carsName) {
-        String[] splitCarName = carsName.split(",");
+        String[] splitCarName = carsName.split(Constant.COMMA);
         List<Car> cars = new ArrayList<>();
         for (int i = 0; i < splitCarName.length; i++) {
             cars.add(new Car(splitCarName[i], 0));
@@ -22,9 +22,9 @@ public class Cars {
         return cars;
     }
 
-    public void move(RandomNumber randomNumber) {
+    public void move() {
         cars.forEach((car) -> {
-            car.setPosition(randomNumber);
+            car.setPosition(new RandomNumber());
         });
     }
 

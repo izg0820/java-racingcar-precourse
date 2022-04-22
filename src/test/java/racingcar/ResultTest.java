@@ -11,20 +11,21 @@ public class ResultTest {
     @Test
     void move테스트() {
         Cars cars = new Cars("a,b,c");
-        cars.move(new RandomNumber(4));
+        cars.move();
         for (Integer position : cars.getPositions()) {
-            assertThat(position).isEqualTo(1);
+            assertThat(position).isBetween(0, 1);
         }
     }
 
     @Test
     void 우승자찾기() {
-        Cars cars = new Cars("a,b,c");
+        Cars cars = new Cars("c,b,a");
         Repeat repeatTime = new Repeat(2);
-        while (repeatTime.isEnd()) {
-            cars.move(new RandomNumber(4));
+        while (!repeatTime.isEnd()) {
+            cars.move();
+            repeatTime.reduce();
         }
         PlayResult result = cars.findWinner();
-        assertThat(result.printWinner()).isEqualTo("a,b,c");
+        assertThat(result.resultSetting()).isLessThanOrEqualTo("c");
     }
 }
