@@ -20,7 +20,7 @@ public class RandomNumberTest {
 
     @Test
     public void 랜덤함수로생성된값테스트() {
-        RandomNumber number = new RandomNumber(Randoms.pickNumberInRange(RandomNumber.MIN, RandomNumber.MAX));
+        RandomNumber number = new RandomNumber(Randoms.pickNumberInRange(Constant.RANDOM_MIN, Constant.RANDOM_MAX));
         assertThat(number.goOrStop()).isExactlyInstanceOf(CarStatus.class);
     }
 }

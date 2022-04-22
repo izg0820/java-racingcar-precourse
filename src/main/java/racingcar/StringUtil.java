@@ -1,6 +1,8 @@
 package racingcar;
 
-public class Utils {
+import java.util.List;
+
+public class StringUtil {
 
     public static String repeat(String s, int number) {
         StringBuilder stringBuilder = new StringBuilder();
@@ -9,4 +11,9 @@ public class Utils {
         }
         return stringBuilder.toString();
     }
+
+    public static String joinWithComma(List<String> stringList) {
+        return String.join(Constant.COMMA, stringList);
+    }
+
 }

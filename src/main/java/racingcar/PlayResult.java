@@ -10,8 +10,8 @@ public class PlayResult {
         winners = new ArrayList<>();
     }
 
-    public String printWinner() {
-        return String.join(",", winners);
+    public String resultSetting() {
+        return StringUtil.joinWithComma(winners);
     }
 
     public void report(Car car) {
