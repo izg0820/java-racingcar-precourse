@@ -56,4 +56,8 @@ public class Cars {
         }
         return max;
     }
+
+    public List<Car> getCars() {
+        return cars;
+    }
 }
