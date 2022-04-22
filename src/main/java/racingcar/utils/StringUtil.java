@@ -1,4 +1,6 @@
-package racingcar;
+package racingcar.utils;
+
+import racingcar.constant.Constant;
 
 import java.util.List;
 

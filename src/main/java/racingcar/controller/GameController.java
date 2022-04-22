@@ -1,4 +1,10 @@
-package racingcar;
+package racingcar.controller;
+
+import racingcar.constant.Message;
+import racingcar.model.Cars;
+import racingcar.model.PlayResult;
+import racingcar.model.Repeat;
+import racingcar.utils.ConsoleUtil;
 
 public class GameController {
 

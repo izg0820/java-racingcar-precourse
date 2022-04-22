@@ -1,4 +1,7 @@
-package racingcar;
+package racingcar.model;
+
+import racingcar.model.Car;
+import racingcar.utils.StringUtil;
 
 import java.util.ArrayList;
 import java.util.List;

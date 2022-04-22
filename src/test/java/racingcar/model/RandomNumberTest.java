@@ -1,7 +1,11 @@
-package racingcar;
+package racingcar.model;
 
 import camp.nextstep.edu.missionutils.Randoms;
 import org.junit.jupiter.api.Test;
+import racingcar.constant.CarStatus;
+import racingcar.constant.Constant;
+import racingcar.model.RandomNumber;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class RandomNumberTest {

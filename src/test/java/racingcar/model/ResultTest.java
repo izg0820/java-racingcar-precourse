@@ -1,8 +1,9 @@
-package racingcar;
+package racingcar.model;
 
 import org.junit.jupiter.api.Test;
-
-import java.util.Arrays;
+import racingcar.model.Cars;
+import racingcar.model.PlayResult;
+import racingcar.model.Repeat;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 

@@ -1,4 +1,6 @@
-package racingcar;
+package racingcar.model;
+
+import racingcar.constant.Constant;
 
 public class Repeat {
 

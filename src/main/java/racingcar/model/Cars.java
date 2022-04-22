@@ -1,6 +1,6 @@
-package racingcar;
+package racingcar.model;
 
-import camp.nextstep.edu.missionutils.Randoms;
+import racingcar.constant.Constant;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,7 +39,7 @@ public class Cars {
     public PlayResult findWinner() {
         PlayResult playResult = new PlayResult();
         int max = findMaxPosition(cars);
-        cars.forEach((car) ->{
+        cars.forEach((car) -> {
             if (car.getPosition() == max) {
                 playResult.report(car);
             }

@@ -1,6 +1,8 @@
-package racingcar;
+package racingcar.model;
 
 import camp.nextstep.edu.missionutils.Randoms;
+import racingcar.constant.CarStatus;
+import racingcar.constant.Constant;
 
 public class RandomNumber {
 
