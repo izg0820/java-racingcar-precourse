@@ -18,22 +18,42 @@ public class Cars {
         List<Car> cars = new ArrayList<>();
         for (int i = 0; i < splitCarName.length; i++) {
             cars.add(new Car(splitCarName[i], 0));
-
         }
         return cars;
     }
 
     public void move(RandomNumber randomNumber) {
-        for (Car car : cars) {
+        cars.forEach((car) -> {
             car.setPosition(randomNumber);
-        }
+        });
     }
 
     public List<Integer> getPositions() {
         List<Integer> positions = new ArrayList<>();
-        for (Car car : cars) {
+        cars.forEach((car) -> {
             positions.add(car.getPosition());
-        }
+        });
         return positions;
+    }
+
+    public PlayResult findWinner() {
+        PlayResult playResult = new PlayResult();
+        int max = findMaxPosition(cars);
+        cars.forEach((car) ->{
+            if (car.getPosition() == max) {
+                playResult.report(car);
+            }
+        });
+        return playResult;
+    }
+
+    private int findMaxPosition(List<Car> cars) {
+        int max = cars.get(0).getPosition();
+        for (Car car : cars) {
+            if (car.getPosition() > max) {
+                max = car.getPosition();
+            }
+        }
+        return max;
     }
 }

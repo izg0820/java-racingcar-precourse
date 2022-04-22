@@ -12,4 +12,8 @@ public class Repeat {
     public boolean isValidate() {
         return String.valueOf(this.repeatNumber).matches(regEx);
     }
+
+    public boolean isEnd() {
+        return repeatNumber == 0;
+    }
 }
