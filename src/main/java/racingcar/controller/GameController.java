@@ -1,6 +1,8 @@
 package racingcar.controller;
 
 import racingcar.constant.ConsoleMessage;
+import racingcar.exception.CustomIllegalArgumentException;
+import racingcar.exception.CustomNumberFormatException;
 import racingcar.model.Cars;
 import racingcar.model.PlayResult;
 import racingcar.model.Repeat;
@@ -24,18 +26,28 @@ public class GameController {
     private void playGame(Cars cars, Repeat repeat) {
         while (!repeat.isEnd()) {
             cars.move();
-            ConsoleUtil.printCarsPosition(cars);
+            ConsoleUtil.printStep(cars);
             repeat.reduce();
         }
     }
 
     private Repeat readRepeatTime() {
-        ConsoleUtil.print(ConsoleMessage.ENTER_REPEAT);
-        return ConsoleUtil.readRepeatTime();
+        try {
+            ConsoleUtil.print(ConsoleMessage.ENTER_REPEAT);
+            return ConsoleUtil.readRepeatTime();
+        } catch (CustomNumberFormatException | CustomIllegalArgumentException exception) {
+            ConsoleUtil.printError(exception);
+            return readRepeatTime();
+        }
     }
 
     private Cars readCarsName() {
-        ConsoleUtil.print(ConsoleMessage.ENTER_CAR_NAMES);
-        return ConsoleUtil.readCarsName();
+        try {
+            ConsoleUtil.print(ConsoleMessage.ENTER_CAR_NAMES);
+            return ConsoleUtil.readCarsName();
+        } catch (CustomIllegalArgumentException exception) {
+            ConsoleUtil.printError(exception);
+            return readCarsName();
+        }
     }
 }

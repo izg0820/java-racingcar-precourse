@@ -25,9 +25,14 @@ public class ConsoleUtil {
         System.out.printf("%s", message);
     }
 
-    public static void printCarsPosition(Cars cars) {
+    public static void printStep(Cars cars) {
         for (Car car : cars.getCars()) {
             System.out.printf("%s : %s\n", car.getName(), StringUtil.repeat(Constant.POSITION_MARK, car.getPosition()));
         }
+        System.out.println();
+    }
+
+    public static void printError(Exception exception) {
+        System.out.println(exception.getMessage());
     }
 }
