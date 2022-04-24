@@ -27,6 +27,6 @@ public class ResultTest {
             repeatTime.reduce();
         }
         PlayResult result = cars.findWinner();
-        assertThat(result.resultSetting()).isLessThanOrEqualTo("c");
+        assertThat(result.resultSetting()).isLessThanOrEqualTo("c,b,a");
     }
 }
