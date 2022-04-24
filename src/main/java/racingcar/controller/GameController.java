@@ -1,6 +1,6 @@
 package racingcar.controller;
 
-import racingcar.constant.Message;
+import racingcar.constant.ConsoleMessage;
 import racingcar.model.Cars;
 import racingcar.model.PlayResult;
 import racingcar.model.Repeat;
@@ -17,7 +17,7 @@ public class GameController {
 
     private void playResult(Cars cars) {
         PlayResult result = cars.findWinner();
-        ConsoleUtil.print(Message.WINNER);
+        ConsoleUtil.print(ConsoleMessage.WINNER);
         ConsoleUtil.print(result.resultSetting());
     }
 
@@ -30,12 +30,12 @@ public class GameController {
     }
 
     private Repeat readRepeatTime() {
-        ConsoleUtil.print(Message.ENTER_REPEAT);
+        ConsoleUtil.print(ConsoleMessage.ENTER_REPEAT);
         return ConsoleUtil.readRepeatTime();
     }
 
     private Cars readCarsName() {
-        ConsoleUtil.print(Message.ENTER_CAR_NAMES);
+        ConsoleUtil.print(ConsoleMessage.ENTER_CAR_NAMES);
         return ConsoleUtil.readCarsName();
     }
 }

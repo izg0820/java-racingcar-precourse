@@ -2,7 +2,7 @@ package racingcar.utils;
 
 import camp.nextstep.edu.missionutils.Console;
 import racingcar.constant.Constant;
-import racingcar.constant.Message;
+import racingcar.constant.ConsoleMessage;
 import racingcar.model.Car;
 import racingcar.model.Cars;
 import racingcar.model.Repeat;
@@ -17,7 +17,7 @@ public class ConsoleUtil {
         return new Cars(Console.readLine());
     }
 
-    public static void print(Message message) {
+    public static void print(ConsoleMessage message) {
         System.out.printf("%s", message.getValue());
     }
 
