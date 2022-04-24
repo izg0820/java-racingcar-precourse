@@ -23,7 +23,7 @@
 
 - [x] 자동차 이름 길이 - **illegalArgumentException**
 - [x] 자동차 이름 공백체크 - **illegalArgumentException**
-- [ ] 자동차 이름 중복체크 - **illegalArgumentException**
+- [x] 자동차 이름 중복체크 - **illegalArgumentException**
 - [x] 반복횟수 숫자인지 아닌지 판별 - **numberFormatException**
 - [x] 반복횟수 양수인지 판별 - **illegalArgumentException**
 
