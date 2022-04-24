@@ -1,6 +1,7 @@
 package racingcar.model;
 
 import org.junit.jupiter.api.Test;
+import racingcar.exception.CustomIllegalArgumentException;
 import racingcar.model.Car;
 import racingcar.model.Cars;
 
@@ -10,8 +11,9 @@ public class CarTest {
 
     @Test
     void 자동차이름_검증() {
-        Car car = new Car("abcde", 0);
-        assertThat(car.isValidate()).isTrue();
+        assertThatThrownBy(() -> {
+            new Car("abcdef", 0);
+        }).isInstanceOf(CustomIllegalArgumentException.class).hasMessageContaining("1자 이상 5자 이하");
     }
 
     @Test

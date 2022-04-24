@@ -1,19 +1,24 @@
 package racingcar.model;
 
 import racingcar.constant.CarStatus;
+import racingcar.constant.ErrorMessage;
+import racingcar.exception.CustomIllegalArgumentException;
 
 public class Car {
 
-    private String name;
+    private final String name;
     private int position;
 
     public Car(String name, int position) {
-        this.name = name;
+        this.name = isValidate(name);
         this.position = position;
     }
 
-    public boolean isValidate() {
-        return this.name.length() <= 5;
+    private String isValidate(String name) {
+        if(name.length() > 5 || name.length() <= 0) {
+            throw new CustomIllegalArgumentException(ErrorMessage.CAR_NAME_WRONG.getValue());
+        }
+        return name;
     }
 
     public void setPosition(RandomNumber randomNumber) {
