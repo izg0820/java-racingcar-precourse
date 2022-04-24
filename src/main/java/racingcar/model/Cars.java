@@ -18,7 +18,7 @@ public class Cars {
     private List<Car> splitCarsName(String carsName) {
         String[] splitCarName = carsName.split(Constant.COMMA);
         this.cars = new ArrayList<>();
-        for(String carName : splitCarName) {
+        for (String carName : splitCarName) {
             if (isDuplicateCarName(carName)) {
                 throw new CustomIllegalArgumentException(ErrorMessage.CAR_NAME_DUPLICATE.getValue());
             }
@@ -38,14 +38,14 @@ public class Cars {
 
     public void move() {
         cars.forEach(car ->
-            car.setPosition(new RandomNumber())
+                car.setPosition(new RandomNumber())
         );
     }
 
     public List<Integer> getPositions() {
         List<Integer> positions = new ArrayList<>();
         cars.forEach(car ->
-            positions.add(car.getPosition())
+                positions.add(car.getPosition())
         );
         return positions;
     }

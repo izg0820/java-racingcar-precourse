@@ -17,5 +17,4 @@ public class StringUtil {
     public static String joinWithComma(List<String> stringList) {
         return String.join(Constant.COMMA, stringList);
     }
-
 }

@@ -16,5 +16,4 @@ public enum ConsoleMessage {
     public String getValue() {
         return value;
     }
-
 }
