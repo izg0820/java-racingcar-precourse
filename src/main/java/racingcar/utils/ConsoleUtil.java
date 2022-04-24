@@ -10,7 +10,7 @@ import racingcar.model.Repeat;
 public class ConsoleUtil {
 
     public static Repeat readRepeatTime() {
-        return new Repeat(Integer.parseInt(Console.readLine()));
+        return new Repeat(Console.readLine());
     }
 
     public static Cars readCarsName() {

@@ -3,6 +3,7 @@ package racingcar.constant;
 public class Constant {
 
     public final static int CAR_NAME_MAX_LENGTH = 5;
+    public final static int CAR_NAME_MIN_LENGTH = 1;
     public final static String COMMA = ",";
     public final static String POSITION_MARK = "-";
     public static final String numericRegEx = "^[0-9]*$";

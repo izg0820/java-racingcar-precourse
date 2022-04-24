@@ -21,7 +21,7 @@ public class ResultTest {
     @Test
     void 우승자찾기() {
         Cars cars = new Cars("c,b,a");
-        Repeat repeatTime = new Repeat(2);
+        Repeat repeatTime = new Repeat("2");
         while (!repeatTime.isEnd()) {
             cars.move();
             repeatTime.reduce();

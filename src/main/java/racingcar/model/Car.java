@@ -1,6 +1,7 @@
 package racingcar.model;
 
 import racingcar.constant.CarStatus;
+import racingcar.constant.Constant;
 import racingcar.constant.ErrorMessage;
 import racingcar.exception.CustomIllegalArgumentException;
 
@@ -15,7 +16,7 @@ public class Car {
     }
 
     private String isValidate(String name) {
-        if(name.length() > 5 || name.length() <= 0) {
+        if(name.length() > Constant.CAR_NAME_MAX_LENGTH || name.length() < Constant.CAR_NAME_MIN_LENGTH) {
             throw new CustomIllegalArgumentException(ErrorMessage.CAR_NAME_WRONG.getValue());
         }
         return name;

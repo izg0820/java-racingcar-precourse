@@ -1,17 +1,22 @@
 package racingcar.model;
 
 import racingcar.constant.Constant;
+import racingcar.constant.ErrorMessage;
+import racingcar.exception.CustomIllegalArgumentException;
 
 public class Repeat {
 
     private int repeatNumber;
 
-    public Repeat(int repeatNumber) {
-        this.repeatNumber = repeatNumber;
+    public Repeat(String repeatNumber) {
+        this.repeatNumber = isValidate(repeatNumber);
     }
 
-    public boolean isValidate() {
-        return String.valueOf(this.repeatNumber).matches(Constant.numericRegEx);
+    public int isValidate(String repeatNumber) {
+        if (!repeatNumber.matches(Constant.numericRegEx)) {
+            throw new CustomIllegalArgumentException(ErrorMessage.REPEAT_TIME_WRONG.getValue());
+        }
+        return Integer.parseInt(repeatNumber);
     }
 
     public boolean isEnd() {
