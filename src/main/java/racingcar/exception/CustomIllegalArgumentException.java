@@ -1,16 +1,14 @@
 package racingcar.exception;
 
+import racingcar.constant.ErrorMessage;
+
 public class CustomIllegalArgumentException extends IllegalArgumentException {
 
     public CustomIllegalArgumentException() {
     }
 
     public CustomIllegalArgumentException(String message) {
-        super(message);
-    }
-
-    public CustomIllegalArgumentException(String message, Throwable cause) {
-        super(message, cause);
+        super(ErrorMessage.PREFIX.getValue() + message);
     }
 }
 

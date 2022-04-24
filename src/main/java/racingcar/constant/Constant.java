@@ -6,9 +6,10 @@ public class Constant {
     public final static int CAR_NAME_MIN_LENGTH = 1;
     public final static String COMMA = ",";
     public final static String POSITION_MARK = "-";
-    public static final String numericRegEx = "^[0-9]*$";
+    public final static String SPACE = " ";
     public static final int RANDOM_MIN = 0;
     public static final int RANDOM_MAX = 9;
     public static final int MOVE_CRITERIA = 4;
+    public static final int REPEAT_END = 0;
 
 }

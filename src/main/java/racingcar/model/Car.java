@@ -16,10 +16,21 @@ public class Car {
     }
 
     private String isValidate(String name) {
-        if(name.length() > Constant.CAR_NAME_MAX_LENGTH || name.length() < Constant.CAR_NAME_MIN_LENGTH) {
+        validateCarNameLength(name);
+        validateCarNameSpace(name);
+        return name;
+    }
+
+    private void validateCarNameSpace(String name) {
+        if (name.contains(Constant.SPACE)) {
+            throw new CustomIllegalArgumentException(ErrorMessage.CAR_NAME_SPACE.getValue());
+        }
+    }
+
+    private void validateCarNameLength(String name) {
+        if (name.length() > Constant.CAR_NAME_MAX_LENGTH || name.length() < Constant.CAR_NAME_MIN_LENGTH) {
             throw new CustomIllegalArgumentException(ErrorMessage.CAR_NAME_WRONG.getValue());
         }
-        return name;
     }
 
     public void setPosition(RandomNumber randomNumber) {
