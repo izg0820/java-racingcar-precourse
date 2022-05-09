@@ -11,14 +11,14 @@ public class Car {
     private int position;
 
     public Car(String name, int position) {
-        this.name = isValidate(name);
+        isValidate(name);
+        this.name = name;
         this.position = position;
     }
 
-    private String isValidate(String name) {
+    private void isValidate(String name) {
         validateCarNameLength(name);
         validateCarNameSpace(name);
-        return name;
     }
 
     private void validateCarNameSpace(String name) {
